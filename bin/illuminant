@@ -1,0 +1,4 @@
+#!/usr/bin/python
+
+import illuminant.main as glcore
+glcore.illuminant_main()
