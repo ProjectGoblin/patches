@@ -1,0 +1,11 @@
++++ launch.py	    2016-01-17 03:49:01.564526623 +0800
+--- launch.py.raw	2016-01-14 19:12:55.901190000 +0800
+@@ -394,7 +394,7 @@
+             validate_master_launch(m, self.is_core, self.is_rostest)
+ 
+             printlog("auto-starting new master")
++            p = create_master_process(self.run_id, 'illuminant', get_ros_root(), m.get_port(), self.num_workers, self.timeout)
+-            p = create_master_process(self.run_id, m.type, get_ros_root(), m.get_port(), self.num_workers, self.timeout)
+             self.pm.register_core_proc(p)
+             success = p.start()
+             if not success:
